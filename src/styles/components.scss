@@ -1,0 +1,78 @@
+// .button {
+//   border-radius: 56px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+
+//   font-family: "Jost";
+//   font-style: normal;
+//   font-weight: 500;
+//   font-size: 15px;
+//   line-height: 26px;
+//   /* identical to box height, or 173% */
+
+//   text-transform: uppercase;
+//   height: 56px;
+
+//   &.icon {
+//     width: 56px;
+//   }
+//   &.text {
+//     padding: 0 30px;
+//   }
+
+//   &.light {
+//     background-color: #ffffff;
+//     color: #1b1b1d;
+//     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+//   }
+//   &.dark {
+//     color: #ffffff;
+//     background: #1b1b1d;
+//     box-shadow: 0px 30px 60px rgba(163, 168, 179, 0.15);
+//   }
+// }
+
+@mixin div-button(
+  $name,
+  $btn-height,
+  $font-size,
+  $line-height,
+  $padding-v,
+  $padding-h
+) {
+  .#{$name} {
+    border-radius: $btn-height;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Jost";
+    font-style: normal;
+    font-weight: 500;
+    font-size: $font-size;
+    line-height: $line-height;
+    /* identical to box height, or 173% */
+
+    text-transform: uppercase;
+    height: $btn-height;
+
+    &.icon {
+      width: $btn-height;
+    }
+    &.text {
+      padding: $padding-v $padding-h;
+    }
+
+    &.light {
+      background-color: #ffffff;
+      color: #1b1b1d;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+    &.dark {
+      color: #ffffff;
+      background: #1b1b1d;
+      box-shadow: 0px 30px 60px rgba(163, 168, 179, 0.15);
+    }
+  }
+}

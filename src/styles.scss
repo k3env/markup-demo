@@ -1,0 +1,145 @@
+// @import "https://necolas.github.io/normalize.css/8.0.1/normalize.css";
+@import "https://meyerweb.com/eric/tools/css/reset/reset.css";
+@import "styles/fonts.scss";
+@import "styles/components.scss";
+
+html {
+  background-color: #eeeff1;
+  display: flex;
+  justify-content: center;
+}
+#root {
+  margin: 0;
+  display: flexbox;
+  background-color: #eeeff1;
+  width: 1440px;
+}
+
+@import "styles/header.scss";
+
+#content {
+  margin-top: 123px;
+  margin-left: 100px;
+  // background-color: red;
+  min-height: 712px;
+  width: 1276px;
+  #content-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 60px;
+    padding-top: 30px;
+    #container-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 0px;
+      gap: 60px;
+
+      width: 597px;
+      height: 520px;
+
+      /* Inside auto layout */
+
+      flex: none;
+      order: 0;
+      flex-grow: 0;
+      #inner {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 30px;
+
+        width: 597px;
+        height: 520px;
+        #big {
+          font-family: "Jost";
+          font-style: normal;
+          font-weight: 800;
+          font-size: 124px;
+          line-height: 140px;
+          /* or 113% */
+
+          color: #1b1b1d;
+
+          /* Inside auto layout */
+
+          flex: none;
+          order: 0;
+          flex-grow: 0;
+          display: inline;
+        }
+        #small {
+          font-family: "Jost";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 24px;
+          line-height: 35px;
+
+          color: #64646a;
+
+          width: 530px;
+
+          /* Inside auto layout */
+
+          flex: none;
+          order: 1;
+          flex-grow: 0;
+        }
+      }
+    }
+    #container-button {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 0px;
+      gap: 30px;
+
+      width: 376px;
+      height: 70px;
+
+      /* Inside auto layout */
+
+      flex: none;
+      order: 1;
+      flex-grow: 0;
+      @include div-button("btn", 70px, 18px, 30px, 0px, 40px);
+      .link {
+        padding-top: 1.5px;
+        padding-left: 0.45px;
+        font-family: "Jost";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 26px;
+        /* identical to box height */
+
+        text-transform: uppercase;
+
+        color: #1b1b1d;
+
+        /* Inside auto layout */
+
+        flex: none;
+        order: 0;
+        flex-grow: 0;
+        &:hover {
+          cursor: pointer;
+          box-sizing: border-box;
+          box-shadow: 0px -1px 0px 0px inset;
+        }
+      }
+    }
+  }
+  #award-small {
+    width: 73px;
+    height: 58px;
+    margin-top: 51px;
+    margin-right: 101px;
+    float: right;
+    display: inline;
+  }
+}
